@@ -1,0 +1,25 @@
+{
+  "name": "agent-workbench",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Agentic full-stack development tool monorepo",
+  "packageManager": "pnpm@8.15.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "dev:web": "pnpm --filter @app/web dev",
+    "dev:worker": "pnpm --filter @app/worker dev", 
+    "dev:intertools": "pnpm --filter @pkg/intertools dev",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean"
+  },
+  "devDependencies": {
+    "turbo": "^1.13.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
